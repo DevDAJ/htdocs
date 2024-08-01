@@ -1,0 +1,282 @@
+
+/* Global Styles */
+* {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Ensure consistent box-sizing */
+    font-family: "Poppins", sans-serif; /* Set the default font to Poppins */
+}
+
+/* Header Styles */
+header {
+    background: #38B6FF; /* Set background color for header */
+}
+
+/* Wrapper Styles */
+.wrapper {
+    padding-inline: 2rem; /* Add padding on inline (left and right) */
+    max-width: 1280px; /* Set maximum width */
+    margin-inline: auto; /* Center the wrapper horizontally */
+}
+
+/* Navbar Styles */
+.navbar {
+    padding-top: 20px !important; /* Add padding to top of navbar */
+}
+
+/* Nav-item Styles */
+.nav-item {
+    margin-left: 50px; /* Add margin to the left of nav items */
+    margin-bottom: 10px; /* Add margin to the bottom of nav items */
+}
+
+/* Nav-link Styles */
+.nav-link {
+    color: #fff !important; /* Set the text color to white */
+    font-size: 15px !important; /* Set font size */
+    padding: 0 0 5px 0 !important; /* Add padding to the bottom */
+    display: unset !important; /* Reset the display property */
+
+    /* Nav-link Hover Styles */
+    &:hover {
+        border-bottom: 2px solid #fff; /* Add bottom border on hover */
+    }
+}
+
+/* Navbar-brand Image Styles */
+.navbar-brand img {
+    width: 80px; /* Set width of brand image */
+}
+
+/* Fa-Bar Icon Styles */
+.fa-bars {
+    color: #fff !important; /* Set the color to white */
+    font-size: 25px !important; /* Set font size */
+}
+
+/* Navbar_toggler Styles */
+.navbar-toggler {
+    border: 0 !important; /* Remove border */
+    outline: none !important; /* Remove outline */
+    padding: initial !important; /* Reset padding */
+}
+
+/* Active-home Styles */
+.active-home {
+    border-bottom: 2px solid #fff; /* Add bottom border to active home */
+}
+
+/* Resources Section Styles */
+.resources {
+    width: 90%; /* Set width */
+    height: 70%; /* Set height */
+    top: 20%; /* Set top position */
+    left: 130px; /* Set left position */
+    position: absolute; /* Set position to absolute */
+    color: #160c01; /* Set text color */
+}
+
+/* Resouces Form Styles */
+.resourcesform {
+    display: grid; /* Use grid layout */
+    grid-auto-columns: 1fr; /* Set automatic column size */
+}
+
+/* Resouces-Text Styles */
+.resources-text {
+    width: 90%; /* Set width */
+
+    /* Resouces-Text Heading Styles */
+    & h1 {
+    font-size: 43px; /* Set font size for h1 */
+    width: 640px; /* Set width */
+    position: relative; /* Set position to relative */
+    color: #38B6FF; /* Set text color */
+    text-transform: capitalize; /* Capitalize text */
+    font-weight: bold; /* Set font weight */
+    padding-bottom: 30px; /* Add padding to bottom */
+    }
+}
+
+/* Resouces- H3 Styles */
+.resources-h3 {
+    width: 650px; /* Set width */
+    font-size: 20px; /* Set font size */
+    line-height: 25px; /* Set line height */
+    text-transform: capitalize; /* Capitalize text */
+    font-weight: bold; /* Set font weight */
+    color: #160c01; /* Set text color */
+}
+
+/* Resouces- Unorder List Styles */
+.resources-ul {
+    list-style: none; /* Remove list style */
+    padding: 0; /* Remove padding */
+
+    /* Resouces- List Styles */
+    & li {
+        display: flex; /* Use flex layout for list items */
+        margin: 0 10px; /* Add margin to list items */
+
+        /* Resouces- Anchor element Styles */
+        & a {
+            text-decoration: none; /* Remove text decoration */
+        }
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Add padding to top and bottom */
+    background-color: #38B6FF; /* Set background color */
+    color: white; /* Set text color */
+    position: fixed; /* Set position to fixed */
+    width: 100%; /* Set width */
+    bottom: 0; /* Set bottom position */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 599px) {
+    /* Wrapper (container) Styling */
+    .wrapper {
+        padding-inline: .5rem;
+        /* Reduce padding on small screens */
+    }
+    /* Navbar Styling */
+    .navbar {
+        padding-top: 10px !important;
+        /* Reduce padding on small screens */
+    }
+    /* Nav-item Styling */
+    .nav-item {
+        margin-left: 10px;
+        /* Reduce margin on small screens */
+        margin-bottom: 5px;
+        /* Reduce margin on small screens */
+    }
+    /* Nav-link Styling */
+    .nav-link {
+        font-size: 12px !important;
+        /* Reduce font size on small screens */
+    }
+    /* Fa-bar Styling */
+    .fa-bars {
+        font-size: 20px !important;
+        /* Reduce icon size on small screens */
+    }
+    /* Resources Styling */
+    .resources {
+        width: 80%;
+        /* Adjust width on small screens */
+        height: 60%;
+        /* Adjust height on small screens */
+        left: 50px;
+        /* Adjust left position on small screens */
+        right: 50px;
+        /* Adjust right position on small screens */
+        padding: 50px 0 50px;
+        /* Adjust padding on small screens */
+    }
+    /* Resources-text Heading 1 Styling */
+    .resources-text h1 {
+        font-size: 24px;
+        /* Reduce font size for h1 on small screens */
+        width: 100%;
+        /* Adjust width on small screens */
+    }
+    /* Resources- Heading 3 Styling */
+    .resources-h3 {
+        font-size: 18px;
+        /* Reduce font size for h3 on small screens */
+        width: 90%;
+        /* Adjust width on small screens */
+    }
+    /* Resources-unorder list Styling */
+    .resources-ul {
+        font-size: 12px;
+        /* Reduce font size for ul on small screens */
+    }
+    /* Resourcesform Styling */
+    .resourcesform {
+        grid-template-columns: 1fr;
+        /* Use single column layout on small screens */
+    }
+}
+
+/* Responsive design for tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+    /* Wrapper (container) Styling */
+    .wrapper {
+        padding-inline: 1.5rem;
+        /* Adjust padding on tablets */
+    }
+    /* Navbar Styling */
+    .navbar {
+        padding-top: 15px !important;
+        /* Adjust padding on tablets */
+    }
+    /* Nav-item Styling */
+    .nav-item {
+        margin-left: 20px;
+        /* Adjust margin on tablets */
+        margin-bottom: 8px;
+        /* Adjust margin on tablets */
+    }
+    /* Nav-link Styling */
+    .nav-link {
+        font-size: 13px !important;
+        /* Adjust font size on tablets */
+    }
+    /* Fa-bar Styling */
+    .fa-bars {
+        font-size: 22px !important;
+        /* Adjust icon size on tablets */
+    }
+    /* Resources Styling */
+    .resources {
+        width: 85%;
+        /* Adjust width on tablets */
+        height: 65%;
+        /* Adjust height on tablets */
+        left: 50px;
+        /* Adjust left position on tablets */
+        top: 10%;
+        /* Adjust top position on tablets */
+        padding: 50px 0 50px;
+        /* Adjust padding on tablets */
+    }
+    /* Resources-text Heading 1 Styling */
+    .resources-text h1 {
+        font-size: 32px;
+        /* Adjust font size for h1 on tablets */
+        width: 80%;
+        /* Adjust width on tablets */
+    }
+    /* Resources-heading 3 Styling */
+    .resources-h3 {
+        font-size: 20px;
+        /* Adjust font size for h3 on tablets */
+        width: 90%;
+        /* Adjust width on tablets */
+    }
+    /* Resources-unorder list Styling */
+    .resources-ul {
+        font-size: 13px;
+        /* Adjust font size for ul on tablets */
+    }
+    /* Resourcesform Styling */
+    .resourcesform {
+        grid-template-columns: 1fr;
+        /* Use single column layout on tablets */
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 1024px) {
+    /* Resourcesform Styling */
+    .resourcesform {
+        grid-template-columns: 1fr 1fr;
+        /* Use two-column layout on larger screens */
+    }
+}

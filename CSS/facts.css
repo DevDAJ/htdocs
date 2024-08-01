@@ -1,0 +1,267 @@
+/* Global Styling */
+* {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    font-family: "Poppins", sans-serif; /* Set the default font to Poppins */
+}
+/* Header Styling */
+header {
+    background: #38B6FF; /* Set background color for header */
+}
+/* Wrapper(container) Styling */
+.wrapper {
+    padding-inline: 2rem; /* Add padding on inline (left and right) */
+    max-width: 1280px; /* Set maximum width */
+    margin-inline: auto; /* Center the wrapper horizontally */
+}
+/* Navbar Styling */
+.navbar {
+    padding-top: 20px !important; /* Add padding to top of navbar */
+}
+/* Nav-item Styling */
+.nav-item {
+    margin-left: 50px; /* Add margin to the left of nav items */
+    margin-bottom: 10px; /* Add margin to the bottom of nav items */
+}
+/* Nav-link Styling */
+.nav-link {
+    color: #fff !important; /* Set the text color to white */
+    font-size: 15px !important; /* Set font size */
+    padding: 0 0 5px 0 !important; /* Add padding to the bottom */
+    display: unset !important; /* Reset the display property */
+    
+    /* Hover Styling */
+    &:hover {
+        border-bottom: 2px solid #fff; /* Add bottom border on hover */
+    }
+}
+/* Navbar-brand Image */
+.navbar-brand img {
+    width: 80px; /* Set width of brand image */
+}
+/* Fa-bar Styling */
+.fa-bars {
+    color: #fff !important; /* Set the color to white */
+    font-size: 25px !important; /* Set font size */
+}
+/* Navbar-toggler */
+.navbar-toggler {
+    border: 0 !important; /* Remove border */
+    outline: none !important; /* Remove outline */
+    padding: initial !important; /* Reset padding */
+}
+/* Active-home Styling */
+.active-home {
+    border-bottom: 2px solid #fff; /* Add bottom border to active home */
+}
+/* Facts Styling */
+.facts {
+    width: 90%; /* Set width */
+    height: 70%; /* Set height */
+    top: 20%; /* Set top position */
+    left: 130px; /* Set left position */
+    position: absolute; /* Set position to absolute */
+    color: #160c01; /* Set text color */
+}
+/* Factsform Styling */
+.factsform {
+    display: grid; /* Use grid layout */
+    grid-auto-columns: 1fr; /* Set automatic column size */
+    gap: 2em; /* Set gap between grid items */
+}
+.factsform > * {
+    flex: 1; /* Allow flexible growth */
+}
+/* Banner-text Styling */
+.banner-text {
+    width: 90%; /* Set width */
+    /* Heading Styling */
+    & h1 {
+        font-size: 43px; /* Set font size for h1 */
+        width: 640px; /* Set width */
+        position: relative; /* Set position to relative */
+        color: #38B6FF; /* Set text color */
+        text-transform: capitalize; /* Capitalize text */
+        font-weight: bold; /* Set font weight */
+        padding-bottom: 30px; /* Add padding to bottom */
+    }
+    /* Paragraph Styling */
+    & p {
+        font-size: 15px; /* Set font size for paragraphs */
+        color: #160c01; /* Set text color */
+    }
+}
+/* Banner-image Styling */
+.banner-image {
+    position: relative; /* Set position to relative */
+    width: 100%; /* Set width */
+    height: 500px; /* Set height */
+    margin-top: 35px; /* Add margin to top */
+}
+.pics {
+    position: absolute; /* Set position to absolute */
+    bottom: 0; /* Set bottom position */
+    left: 0; /* Set left position */
+    width: 90%; /* Set width */
+    height: 90%; /* Set height */
+
+    & img {
+        width: 100%; /* Set image width */
+        height: 100%; /* Set image height */
+    }
+}
+/* tooltip Styling */
+.tooltip {
+    visibility: hidden; /* Initially hide the tooltip */
+    width: 120px; /* Set width */
+    background-color: #555; /* Set background color */
+    color: #fff; /* Set text color */
+    text-align: center; /* Center align text */
+    border-radius: 6px; /* Round the corners */
+    padding: 5px; /* Add padding */
+    position: absolute; /* Set position to absolute */
+    z-index: 1; /* Ensure tooltip appears above other elements */
+    bottom: 125%; /* Position the tooltip above the text */
+    left: 50%; /* Center the tooltip */
+    margin-left: -60px; /* Center align the tooltip horizontally */
+    opacity: 0; /* Set initial opacity */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+.fact:hover .tooltip {
+    visibility: visible; /* Show the tooltip on hover */
+    opacity: 1; /* Set opacity to full on hover */
+}
+/* Footer Styling */
+footer {
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Add padding to top and bottom */
+    background-color: #38B6FF; /* Set background color */
+    color: white; /* Set text color */
+    position: fixed; /* Set position to fixed */
+    width: 100%; /* Set width */
+    bottom: 0; /* Set bottom position */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 599px) {
+    /* Wrapper Styling */
+    .wrapper {
+        padding-inline: .5rem; /* Reduce padding on small screens */
+    }
+    /* Navbar Styling */
+    .navbar {
+        padding-top: 10px !important; /* Reduce padding on small screens */
+    }
+    /* Nav-item Styling */
+    .nav-item {
+        margin-left: 10px; /* Reduce margin on small screens */
+        margin-bottom: 5px; /* Reduce margin on small screens */
+    }
+    /* Nav-link Styling */
+    .nav-link {
+        font-size: 12px !important; /* Reduce font size */
+    }
+    /* Fa-bar Styling */
+    .fa-bars {
+        font-size: 20px !important; /* Reduce icon size */
+    }
+    /* Facts Styling */
+    .facts {
+        width: 80%; /* Adjust width */
+        height: 60%; /* Adjust height */
+        left: 50px; /* Adjust left position */
+        right: 50px; /* Adjust right position */
+        padding: 50px 0 50px; /* Adjust padding */
+    }
+    /* Banner-text Styling */
+    .banner-text {
+        /* Heading Styling */
+        & h1 {
+            font-size: 24px; /* Reduce font size */
+            width: 100%; /* Adjust width */
+        }
+        /* Paragraph Styling */
+        & p {
+            font-size: 12px; /* Reduce font size */
+        }
+    }
+    /* Banner-image Styling */
+    .banner-image {
+        height: 300px; /* Reduce height */
+        margin-top: 20px; /* Adjust margin */
+    }
+    .pics {
+        width: 100%; /* Adjust width */
+        height: 100%; /* Adjust height */
+    }
+    /* Factsform Styling */
+    .factsform {
+        grid-template-columns: 1fr; /* Use single column layout */
+    }
+}
+
+/* Responsive design for tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+    /* Wrapper(container) Styling */
+    .wrapper {
+        padding-inline: 1.5rem; /* Adjust padding */
+    }
+    /* Navbar Styling */
+    .navbar {
+        padding-top: 15px !important; /* Adjust padding */
+    }
+    /* Nav-item Styling */
+    .nav-item {
+        margin-left: 20px; /* Adjust margin */
+        margin-bottom: 8px; /* Adjust margin */
+    }
+    /* Nav-link Styling */
+    .nav-link {
+        font-size: 13px !important; /* Adjust font size */
+    }
+    /* Fa-bar Styling */
+    .fa-bars {
+        font-size: 22px !important; /* Adjust icon size */
+    }
+    /* Facts Styling */
+    .facts {
+        width: 85%; /* Adjust width */
+        height: 65%; /* Adjust height */
+        left: 50px; /* Adjust left position */
+        right: 50px; /* Adjust right position */
+        padding: 50px 0 50px; /* Adjust padding */
+    }
+    /* Banner-text Styling */
+    .banner-text {
+        /* Heading Styling */
+        & h1 {
+            font-size: 32px; /* Adjust font size */
+            width: 80%; /* Adjust width */
+        }
+        /* Paragraph Styling */
+        & p {
+            font-size: 13px; /* Adjust font size */
+        }
+    }
+    /* Banner-image Styling */
+    .banner-image {
+        height: 400px; /* Adjust height */
+        margin-top: 30px; /* Adjust margin */
+    }
+    .pics {
+        width: 95%; /* Adjust width */
+        height: 95%; /* Adjust height */
+    }
+    /* Factsform Styling */
+    .factsform {
+        grid-template-columns: 1fr; /* Use single column layout */
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 1024px) {
+    /* Factsform Styling */
+    .factsform {
+        grid-template-columns: 1fr 1fr; /* Use two-column layout */
+    }
+}

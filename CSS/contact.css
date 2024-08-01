@@ -1,0 +1,531 @@
+/* Global Styles */
+* {
+    margin: 0;
+    /* Reset margin */
+    padding: 0;
+    /* Reset padding */
+    box-sizing: border-box;
+    /* Ensure consistent box-sizing */
+    font-family: "Poppins", sans-serif;
+    /* Set the default font to Poppins */
+}
+
+/* Header Styles */
+header {
+    background: #38B6FF;
+    /* Set background color for header */
+}
+
+/* Wrapper Styles */
+.wrapper {
+    padding-inline: 2rem;
+    /* Add padding on inline (left and right) */
+    max-width: 1280px;
+    /* Set maximum width */
+    margin-inline: auto;
+    /* Center the wrapper horizontally */
+}
+
+/* Navbar Styles */
+.navbar {
+    padding-top: 20px !important;
+    /* Add padding to top of navbar */
+}
+
+.nav-item {
+    margin-left: 50px;
+    /* Add margin to the left of nav items */
+    margin-bottom: 10px;
+    /* Add margin to the bottom of nav items */
+}
+
+.nav-link {
+    color: #fff !important;
+    /* Set the text color to white */
+    font-size: 15px !important;
+    /* Set font size */
+    padding: 0 0 5px 0 !important;
+    /* Add padding to the bottom */
+    display: unset !important;
+    /* Reset the display property */
+}
+
+.navbar-brand img {
+    width: 80px;
+    /* Set width of brand image */
+}
+
+.fa-bars {
+    color: #fff !important;
+    /* Set the color to white */
+    font-size: 25px !important;
+    /* Set font size */
+}
+
+.navbar-toggler {
+    border: 0 !important;
+    /* Remove border */
+    outline: none !important;
+    /* Remove outline */
+    padding: initial !important;
+    /* Reset padding */
+}
+
+.active-home {
+    border-bottom: 2px solid #fff;
+    /* Add bottom border to active home */
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #fff;
+    /* Add bottom border on hover */
+}
+
+/* Contact Us Section Styles */
+.contactus {
+    width: 90%;
+    /* Set width */
+    height: 70%;
+    /* Set height */
+    top: 20%;
+    /* Set top position */
+    left: 100px;
+    /* Set left position */
+    position: absolute;
+    /* Set position to absolute */
+    margin-top: 10px;
+    /* Add top margin */
+
+    & h1 {
+        font-size: 43px;
+        /* Set font size for h1 */
+        width: 640px;
+        /* Set width */
+        position: relative;
+        /* Set position to relative */
+        color: #38B6FF;
+        /* Set text color */
+        text-transform: capitalize;
+        /* Capitalize text */
+        font-weight: bold;
+        /* Set font weight */
+        padding-bottom: 30px;
+        /* Add padding to bottom */
+    }
+
+    & p {
+        font-size: 15px;
+        /* Set font size for paragraphs */
+        color: #160c01;
+        /* Set text color */
+    }
+}
+
+/* Contact Form Styles */
+.contactform {
+    display: grid;
+    /* Use grid layout */
+    grid-auto-columns: 1fr;
+    /* Set automatic column size */
+    gap: 2em;
+    /* Set gap between grid items */
+}
+
+.contactform>* {
+    flex: 1;
+    /* Allow flexible growth */
+}
+
+/* Form Styles */
+form {
+    width: 90%;
+    /* Set width */
+}
+
+/* Map Wrapper Styles */
+.map-wrapper {
+    position: relative;
+    /* Set position to relative */
+    width: 100%;
+    /* Set width */
+    height: 500px;
+    /* Set height */
+    margin-top: 35px;
+    /* Add top margin */
+}
+
+/* Map Styles */
+.map {
+    position: absolute;
+    /* Set position to absolute */
+    bottom: 0;
+    /* Set bottom position */
+    left: 0;
+    /* Set left position */
+    width: 90%;
+    /* Set width */
+    height: 90%;
+    /* Set height */
+}
+
+.map iframe {
+    width: 100%;
+    /* Set width */
+    height: 100%;
+    /* Set height */
+}
+
+/* Input Styles */
+.input {
+    width: 95%;
+    /* Set width */
+    max-width: 700px;
+    /* Set maximum width */
+    border: none;
+    /* Remove border */
+    font-size: .9rem;
+    /* Set font size */
+    padding: 1em;
+    /* Add padding */
+    outline: none;
+    /* Remove outline */
+    margin-bottom: 1em;
+    /* Add bottom margin */
+    background-color: #d9e5f1;
+    /* Set background color */
+    color: #080808;
+    /* Set text color */
+    border-radius: 10px;
+    /* Add rounded corners */
+    border: 1px solid #ccc;
+    /* Add a light gray border */
+}
+
+.input:focus {
+    border: 1px solid #38B6FF;
+    /* Add a light gray border on focus */
+}
+
+.input::placeholder {
+    text-transform: capitalize;
+    /* Capitalize placeholder text */
+}
+
+/* Submit Button Styles */
+.submit {
+    background-color: #38B6FF;
+    /* Set the background color */
+    border: none;
+    /* Remove border */
+    color: white;
+    /* Set the text color to white */
+    font-weight: bold;
+    /* Set the font weight to bold */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    width: 50%;
+    /* Set the width to 50% */
+    padding: 10px;
+    /* Add padding inside the button */
+    align-items: center;
+    /* Align items in the center */
+}
+
+/* Hover effect for the submit button */
+.submit:hover {
+    background-color: #f7047e;
+    /* Change background color on hover */
+}
+
+/* Required Field Color */
+.required-color {
+    color: #ff4747;
+    /* Set the text color to red */
+}
+
+/* Popup Styling */
+.popup {
+    position: absolute;
+    /* Position the popup absolutely */
+    bottom: 20px;
+    /* Set the bottom position */
+    top: 50px;
+    /* Set the top position */
+    left: 50%;
+    /* Center align horizontally */
+    transform: translateX(-50%);
+    /* Adjust position to center */
+    background-color: #fff;
+    /* Set the background color to white */
+    padding: 0 30px 30px;
+    /* Add padding inside the popup */
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+    max-width: 400px;
+    /* Set the maximum width */
+    width: 400%;
+    /* Set the width */
+    text-align: center;
+    /* Center align the text */
+    z-index: 1000;
+    /* Set the z-index */
+}
+
+/* Popup Paragraph Styling */
+.popup p {
+    font-size: 20px;
+    /* Set the font size */
+    font-weight: 400;
+    /* Set the font weight */
+    margin: 50px 0 10px;
+    /* Add vertical margins */
+}
+
+/* Popup Button Styling */
+.popup button {
+    width: 100%;
+    /* Set the width to 100% */
+    margin-top: 50px;
+    /* Add top margin */
+    padding: 5px 0;
+    /* Add vertical padding */
+    background: #6fd649;
+    /* Set the background color */
+    color: #fff;
+    /* Set the text color to white */
+    border: none;
+    /* Remove border */
+    outline: none;
+    /* Remove outline */
+    font-size: 18px;
+    /* Set the font size */
+    border-radius: 4px;
+    /* Add rounded corners */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Add box shadow */
+}
+
+/* Hover effect for popup button */
+.popup button:hover {
+    background-color: #f7047e;
+    /* Change background color on hover */
+}
+
+/* Error Border Color */
+.error {
+    border-color: #ff4747;
+    /* Set the border color to red */
+}
+
+/* Valid Border Color */
+.valid {
+    border-color: #37a137;
+    /* Set the border color to green */
+}
+
+/* Hide Elements */
+.hide {
+    display: none;
+    /* Hide the element */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    /* Center text */
+    padding: 10px 0;
+    /* Add padding to top and bottom */
+    background-color: #38B6FF;
+    /* Set background color */
+    color: white;
+    /* Set text color */
+    position: fixed;
+    /* Set position to fixed */
+    width: 100%;
+    /* Set width */
+    bottom: 0;
+    /* Set bottom position */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 599px) {
+    /* Wrapper(Container) Styling */
+    .wrapper {
+        padding-inline: 1rem;
+        /* Reduce padding on small screens */
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        padding-top: 10px !important;
+        /* Reduce padding on small screens */
+    }
+
+    /* Nav-item Styling */
+    .nav-item {
+        margin-left: 10px;
+        /* Reduce margin on small screens */
+        margin-bottom: 5px;
+        /* Reduce margin on small screens */
+    }
+
+    /* Nav-link Styling */
+    .nav-link {
+        font-size: 12px !important;
+        /* Reduce font size on small screens */
+    }
+
+    /* Fa-bars Styling */
+    .fa-bars {
+        font-size: 20px !important;
+        /* Reduce icon size on small screens */
+    }
+
+    /* Contactus Styling */
+    .contactus {
+        width: 80%;
+        /* Adjust width on small screens */
+        height: 60%;
+        /* Adjust height on small screens */
+        left: 50px;
+        /* Adjust left position on small screens */
+        right: 50px;
+        /* Adjust right position on small screens */
+        padding: 50px 0 50px;
+        /* Adjust padding on small screens */
+
+        /* Heading Styling */
+        & h1 {
+            font-size: 24px;
+            /* Reduce font size for h1 on small screens */
+            width: 100%;
+            /* Adjust width on small screens */
+        }
+        
+        /* Paragraph Styling */
+        & p {
+            font-size: 12px;
+            /* Reduce font size for p on small screens */
+        }
+    }
+
+    /* Map-wrapper Styling */
+    .map-wrapper {
+        height: 300px;
+        /* Reduce height on small screens */
+        margin-top: 30px;
+        /* Adjust margin on small screens */
+    }
+
+    /* Map Styling */
+    .map {
+        width: 100%;
+        /* Adjust width */
+        height: 100%;
+        /* Adjust height */
+    }
+
+    /* Contactform Styling */
+    .contactform {
+        grid-template-columns: 1fr;
+        /* Use single column layout on small screens */
+    }
+}
+
+/* Responsive design for tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+    /* Wrapper(Container) Styling */
+    .wrapper {
+        padding-inline: 1.5rem;
+        /* Adjust padding on tablets */
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        padding-top: 15px !important;
+        /* Adjust padding on tablets */
+    }
+
+    /* Nav-item Styling */
+    .nav-item {
+        margin-left: 20px;
+        /* Adjust margin on tablets */
+        margin-bottom: 8px;
+        /* Adjust margin on tablets */
+    }
+
+    /* Nav-link Styling */
+    .nav-link {
+        font-size: 13px !important;
+        /* Adjust font size on tablets */
+    }
+
+    /* Fa-bar Styling */
+    .fa-bars {
+        font-size: 22px !important;
+        /* Adjust icon size on tablets */
+    }
+
+    /* Contactus Styling */
+    .contactus {
+        width: 85%;
+        /* Adjust width on tablets */
+        height: 65%;
+        /* Adjust height on tablets */
+        left: 50px;
+        /* Adjust left position on tablets */
+        right: 50px;
+        /* Adjust right position on tablets */
+        padding: 50px 0 50px;
+        /* Adjust padding on tablets */
+
+        /* Heading Styling */
+        & h1 {
+            font-size: 32px;
+            /* Adjust font size for h1 on tablets */
+            width: 80%;
+            /* Adjust width on tablets */
+        }
+        
+        /* Paragraph Styling */
+        & p {
+            font-size: 13px;
+            /* Adjust font size for p on tablets */
+        }
+    }
+
+    /* Map-wrapper Styling */
+    .map-wrapper {
+        height: 400px;
+        /* Adjust height on tablets */
+        margin-top: 30px;
+        /* Adjust margin on tablets */
+    }
+
+    /* Map Styling */
+    .map {
+        width: 95%;
+        /* Adjust width on tablets */
+        height: 95%;
+        /* Adjust height on tablets */
+    }
+
+    /* Contactform Styling */
+    .contactform {
+        grid-template-columns: 1fr;
+        /* Use single column layout on tablets */
+    }
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 1024px) {
+    /* Contactform Styling */
+    .contactform {
+        grid-template-columns: 1fr 1fr;
+        /* Use two-column layout on larger screens */
+    }
+}
