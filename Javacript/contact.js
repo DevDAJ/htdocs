@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const isSubjectValid = subjectInput.value.trim() !== "";
     const isMessageValid = messageTextarea.value.trim() !== "";
 
-    // Check if all inputs are valid
+    // Check if all inputs are invalid
     if (!(isNameValid && isEmailValid && isSubjectValid && isMessageValid)) {
       event.preventDefault(); // Prevent default form submission
       alert("Please correct the highlighted errors and try again.");

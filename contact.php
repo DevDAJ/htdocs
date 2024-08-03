@@ -77,7 +77,7 @@
       <div class="contactus">
         <!-- Contactform for the form -->
         <div class="contactform">
-          <form action="/contact.php" method="post">
+          <form action="#" method="post">
             <h1>Contact US!</h1>
             <p>If you need help, kindly fill the forms.</p>
 
@@ -193,9 +193,9 @@ if ($method == "POST") {
 
         if ($stmt->execute()) {
             echo '<script>
-                var popup = document.getElementById("popup");
-        popup.style.display = "block";
-            </script>';
+                    var popup = document.getElementById("popup");
+                    popup.style.display = "block";
+                </script>';
         } else {
             
             http_response_code(400);

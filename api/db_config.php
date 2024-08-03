@@ -2,8 +2,8 @@
 <?php
 // Database configuration
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "marine";
+$password = "marine";
 $dbname = "marine";
 $contact_table = "contact_us";
 $pledge_table = "pledge";
