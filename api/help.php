@@ -1,11 +1,7 @@
 
 <?php
 // Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "marine";
-$table = "pledge";
+include 'db_config.php';
 
 
 // Create connection
@@ -45,24 +41,7 @@ if ($method == "POST") {
 
     // If no errors, insert into database
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO $table (name, email) VALUES (?, ?)");
-        if (!$stmt) {
-            // create table
-            $sql = "CREATE TABLE $table (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(30) NOT NULL,
-                email VARCHAR(50) NOT NULL,
-                reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-            )";
-            if ($conn->query($sql) === TRUE) {
-                echow "Table $table created successfully";
-            } else {
-                http_response_code(500);
-                echo json_encode($conn->error);
-                exit;
-            }
-        }
-
+        $stmt = $conn->prepare("INSERT INTO $pledge_table (name, email) VALUES (?, ?)");
         $stmt->bind_param("ss", $name, $email);
 
         if ($stmt->execute()) {

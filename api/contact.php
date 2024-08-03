@@ -1,11 +1,7 @@
 
 <?php
 // Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "marine";
-$table = "contact_us";
+include 'db_config.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -56,26 +52,7 @@ if ($method == "POST") {
 
     // If no errors, insert into database
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO $table (name, email, subject, message) VALUES (?, ?, ?, ?)");
-        if (!$stmt) {
-            // create table
-            $sql = "CREATE TABLE $table (
-                id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(30) NOT NULL,
-                email VARCHAR(50) NOT NULL,
-                subject VARCHAR(50) NOT NULL,
-                message TEXT NOT NULL,
-                reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-            )";
-            if ($conn->query($sql) === TRUE) {
-                echo "Table $table created successfully";
-            } else {
-                http_response_code(500);
-                echo json_encode($conn->error);
-                exit;
-            }
-            $stmt = $conn->prepare("INSERT INTO $table (name, email, subject, message) VALUES (?, ?, ?, ?)");
-        }
+        $stmt = $conn->prepare("INSERT INTO $contact_table (name, email, subject, message) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $subject, $message);
 
         if ($stmt->execute()) {

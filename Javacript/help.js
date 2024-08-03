@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const isEmailValid = emailVerify(emailInput.value);
 
     // Check if all inputs are valid
-    if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+    if (isNameValid && isEmailValid) {
         popup.style.display = "block"; // Show the popup
         const formData = new FormData();
         formData.append("name", nameInput.value);
