@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Event listener for form submission
   submitButton.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default form submission
 
     // Validate inputs
     const isNameValid = textVerify(nameInput.value);
@@ -87,35 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const isMessageValid = messageTextarea.value.trim() !== "";
 
     // Check if all inputs are valid
-    if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-        popup.style.display = "block"; // Show the popup
-        const formData = new FormData();
-        formData.append("name", nameInput.value);
-        formData.append("email", emailInput.value);
-        formData.append("subject", subjectInput.value);
-        formData.append("message", messageTextarea.value);
-
-        const request = fetch("/api/contact.php", {
-            method: "POST",
-            body: formData,
-        });
-        request.then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            popup.style.display = "block";
-            document.querySelector("form").reset();
-            for (const element of document.querySelectorAll(".valid")) {
-              element.classList.remove("valid");
-            }
-        })
-            .catch(error => {
-                console.error(error);
-        });
-
-    } else {
-        alert("Please correct the highlighted errors and try again.");
-    }
+    if (!(isNameValid && isEmailValid && isSubjectValid && isMessageValid)) {
+      event.preventDefault(); // Prevent default form submission
+      alert("Please correct the highlighted errors and try again.");
+    } 
   });
 
   // Function to close the popup

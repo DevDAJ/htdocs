@@ -15,13 +15,14 @@ if ($conn->connect_error) {
 }
 
 // CHECK IF DATABASE EXISTS
-$sql = "SHOW DATABASES LIKE $dbname";
+$sql = "SHOW DATABASES LIKE '$dbname'";
 $result = $conn->query($sql);
+
 if ($result->num_rows == 0) {
     // Create databased
     $sql = "CREATE DATABASE IF NOT EXISTS marine";
     if ($conn->query($sql) === TRUE) {
-        echo "Database created successfully\n";
+        echo '<script>alert("Database created successfully")</script>';
     } else {
         echo "Error creating database: " . $conn->error;
     }
@@ -41,7 +42,7 @@ if ($result->num_rows == 0) {
     )";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Table created successfully\n";
+        echo '<script>alert("Table created successfully")</script>';
     } else {
         echo "Error creating table: " . $conn->error;
     }
@@ -63,7 +64,7 @@ if ($result->num_rows == 0) {
     )";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Table created successfully \n";
+        echo '<script>alert("Table created successfully")</script>';
     } else {
         echo "Error creating table: " . $conn->error;
     }
